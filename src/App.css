@@ -1,3 +1,18 @@
+body {
+  color:rgb(101, 38, 55);
+  background: rgb(255,227,218);
+  background: linear-gradient(0deg, rgba(255,227,218,1) 0%, rgba(255,250,225,1) 100%);
+  background-image: url(./components/Imagenes/fondo.png);
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+::selection {
+  background-color: #ff86a0;
+  color: #ffe7f2; 
+}
+
 .App {
   text-align: center;
 }
@@ -14,14 +29,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:rgb(101, 38, 55);
 }
 
 .App-link {

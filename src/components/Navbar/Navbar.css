@@ -1,0 +1,141 @@
+.header {
+    background-color: #ac7d88c7;
+    background: linear-gradient(to right, #ffb9ac, #b3487d);
+    background-size: cover;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.507);
+    width: 90%;
+}
+
+.header__contenedor {
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrito_botones {
+    margin-left: 20px;
+    background: #ffafbc00;
+    border: 1.5px solid #ff9dad00;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.carrito_botones:hover {
+    background: #ffafbc00;
+    border: 1.5px solid #ffbdc800;
+}
+
+.iconos {
+    font-size: 1.5rem;
+    padding: 20px;
+    color:rgb(255, 225, 238);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.iconos:hover {
+    color:white;
+}
+
+.contenedor_opciones {
+    display: flex;
+}
+
+.input_busqueda {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 5px;
+    border: #862451 2px solid;
+}
+
+.btn_busqueda {
+    border:#862451 2px solid;
+    color:#8f265b;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: rgb(255, 212, 231);
+    width: 80px;
+    height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn_busqueda:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+    background-color: rgb(255, 247, 251);
+    letter-spacing: 2px;
+}
+
+.categoria {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(101, 38, 55);
+    border:#862451 2px solid;
+    background-color: rgb(255, 235, 235);
+    border-radius: 5px;
+    padding: 6px;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 0.5s;
+}
+
+.categoria:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+}
+
+.enlace_compra {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(101, 38, 55);
+    border:#862451 2px solid;
+    background-color: rgb(255, 235, 235);
+    border-radius: 5px;
+    padding: 6px;
+    width: 100%;
+    margin-top: 5px;
+    transition: all 0.5s;
+}
+
+.enlace_compra:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+    letter-spacing: 2px;
+}
+
+.btn_filtro {
+    border:#862451 2px solid;
+    color:#8f265b;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: rgb(255, 212, 231);
+    width: 100px;
+    padding: 4px;
+    margin-top: 7px;
+    margin-left: 10px;
+    height: 50%;
+    transition: all 0.5s;
+}
+
+.btn_filtro:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+    letter-spacing: 2px;
+    background-color: rgb(255, 247, 251);
+}
+
+
+
