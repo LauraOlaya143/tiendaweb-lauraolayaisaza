@@ -1,0 +1,30 @@
+.container {
+    border: 2px solid rgb(151, 67, 97);
+    background-color: #ffffff53;
+    border-radius: 10px;
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(101, 38, 55);
+    border:#862451 2px solid;
+    background-color: rgb(255, 235, 235);
+    border-radius: 5px;
+    padding: 6px;
+    width: 80%;
+    margin-top: 15px;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+    letter-spacing: 2px;
+}

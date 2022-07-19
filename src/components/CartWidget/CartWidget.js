@@ -2,9 +2,9 @@ import './CartWidget.css';
 
 const CartWidget = () => {
     return (
-        <div className="div_principal iconos">
-            <i className="fas fa-cart-plus"></i>
-            0
+        <div className="div_principal ">
+            <i className="fas fa-cart-plus iconos"></i>
+            <p className="number">0</p>
         </div>
     )
 };
