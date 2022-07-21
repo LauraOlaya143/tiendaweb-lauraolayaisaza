@@ -1,7 +1,6 @@
-import './ItemCount.css';
 import { useState } from 'react'
 
-const ItemCount = ({ stock, valInicial, onAdd, name }) => {
+const ItemCount = ({ stock, valInicial, onAdd }) => {
     const [count, setCount] = useState(0)
 
     const min = () => {
@@ -18,7 +17,6 @@ const ItemCount = ({ stock, valInicial, onAdd, name }) => {
 
     return(
         <div className="container">
-            <h3>{name}</h3>
             <div>
                 <div className="count">
                     <button onClick={min}> - </button>

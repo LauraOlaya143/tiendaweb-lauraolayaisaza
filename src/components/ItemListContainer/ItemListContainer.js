@@ -1,16 +1,33 @@
-import './ItemListContainer';
-import ItemCount from '../ItemCount/ItemCount';
+import './ItemListContainer.css';
+import ItemList from '../ItemList/ItemList'
+import { useState, useEffect } from 'react'
+import { getProducts } from '../../asyncMock'
 
 const ItemListContainer = (props) => {
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    const onAdd = (quantity) => {
-        alert("Cantidad de items agregados " + quantity)
+    useEffect(() =>{
+        getProducts().then(response =>{
+            setProducts(response)
+        }).catch (error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+    }, []) 
+
+    if(loading) {
+        return <h1>Cargando...</h1>
     }
 
     return (
         <div>
             <h1>{props.greeting}</h1>
-        <ItemCount stock={10} valInicial={0} onAdd={onAdd} name="Producto N°1"/>
+            <div>
+                <ItemList products={products}/>
+            </div>
+            
         </div>
     )
 };

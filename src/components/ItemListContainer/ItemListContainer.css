@@ -1,0 +1,55 @@
+.contenedor_cartas {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    padding: 10px;
+}
+
+.card {
+    width: 250px;
+    border-radius: 10px;
+    border:rgb(101, 38, 55) solid 1.4px;
+    background-color: rgba(255, 255, 255, 0.491);
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+.card:hover { 
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.507);
+}
+
+.img {
+    width: 70%;
+    border-radius: 10px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.info {
+    text-align: center;
+    align-items: center;
+    line-height: 1.2em;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(101, 38, 55);
+    border:#862451 2px solid;
+    background-color: rgb(255, 235, 235);
+    border-radius: 5px;
+    padding: 6px;
+    width: 80%;
+    margin-top: 15px;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+    letter-spacing: 2px;
+}

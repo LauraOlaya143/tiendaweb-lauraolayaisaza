@@ -2,7 +2,7 @@ body {
   color:rgb(101, 38, 55);
   background: rgb(255,227,218);
   background: linear-gradient(0deg, rgba(255,227,218,1) 0%, rgba(255,250,225,1) 100%);
-  background-image: url(../public/Imagenes/fondo.png);
+  background-image: url(../public/images/fondo.png);
   background-attachment: fixed;
   background-size: cover;
   
