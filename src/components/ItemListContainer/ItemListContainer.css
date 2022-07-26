@@ -15,6 +15,7 @@
     margin-bottom: 30px;
     padding: 10px;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .card:hover { 
@@ -53,3 +54,25 @@
     border:#ff75ba 2px solid;
     letter-spacing: 2px;
 }
+
+.loader {
+    margin: 0 auto;
+    margin-top: 220px;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #ff00a6;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 

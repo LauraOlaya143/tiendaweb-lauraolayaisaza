@@ -38,8 +38,8 @@ body {
   color:rgb(101, 38, 55);
 }
 
-.App-link {
-  color: #61dafb;
+.itemdetail {
+  background-color: rgba(255, 255, 255, 0.491);
 }
 
 @keyframes App-logo-spin {

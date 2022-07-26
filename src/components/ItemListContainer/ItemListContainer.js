@@ -18,7 +18,7 @@ const ItemListContainer = (props) => {
     }, []) 
 
     if(loading) {
-        return <h1>Cargando...</h1>
+        return <div className="loader"></div>
     }
 
     return (

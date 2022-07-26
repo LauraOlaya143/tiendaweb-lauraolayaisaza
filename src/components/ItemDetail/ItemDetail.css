@@ -1,0 +1,23 @@
+.item_card {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+}
+
+.img_detail {
+    width: 500px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    padding: 10px;
+}
+
+.text {
+    margin-top: 10px;
+    max-width: 500px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.text_2 {
+    align-items: center;
+}
