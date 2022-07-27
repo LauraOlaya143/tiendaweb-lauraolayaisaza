@@ -44,8 +44,9 @@
     background-color: rgb(255, 235, 235);
     border-radius: 5px;
     padding: 6px;
-    width: 80%;
+    width: 60%;
     margin-top: 15px;
+    cursor: pointer;
     transition: all 0.5s;
 }
 

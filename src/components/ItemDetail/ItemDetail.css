@@ -5,19 +5,23 @@
 }
 
 .img_detail {
-    width: 500px;
     margin-bottom: 30px;
     margin-left: 40px;
     padding: 10px;
+    width: 70%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 .text {
     margin-top: 10px;
-    max-width: 500px;
+    width: 100%;
     text-align: justify;
     font-size: 20px;
+    padding: 0px;
 }
 
 .text_2 {
     align-items: center;
+    text-align: center;
 }
