@@ -56,24 +56,30 @@
     letter-spacing: 2px;
 }
 
-.loader {
-    margin: 0 auto;
-    margin-top: 220px;
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: #ff00a6;
-    border-radius: 50%;
+.button_detalle {
     display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(101, 38, 55);
+    border:#862451 2px solid;
+    background-color: rgb(255, 235, 235);
+    border-radius: 5px;
+    padding: 6px;
+    width: 60%;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+.button_detalle:hover {
+    color: #ff75ba;
+    border:#ff75ba 2px solid;
+    letter-spacing: 2px;
+}
+
+.greeting {
+    font-family: 'Gentium Plus', serif;
+    font-size: 40px;
+}

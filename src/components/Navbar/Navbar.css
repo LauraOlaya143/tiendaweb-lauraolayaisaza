@@ -17,6 +17,50 @@
     align-items: center;
 }
 
+.container_nav {
+    display: flex;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.container_enlaces {
+    display: flex;
+    list-style: none;
+}
+
+.enlaces {
+    margin-right: 50px;
+}
+
+.enlaces_text {
+    text-decoration: none;
+    color:rgb(255, 225, 238);
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.enlaces_text:hover {
+    text-shadow: rgb(108, 42, 71) 0.1em 0.1em 0.2em;
+    color:rgb(255, 255, 255)
+}
+
+.logo {
+    font-family: 'Gentium Plus', serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-right: 20px;
+    letter-spacing: 2px;
+    color: #fff2e5;
+    transition: all 0.5s;
+}
+
+.logo:hover { 
+    color: #ffffff;
+}
+
 .carrito_botones {
     margin-left: 20px;
     background: #ffafbc00;
@@ -44,99 +88,6 @@
 
 .contenedor_opciones {
     display: flex;
-}
-
-.input_busqueda {
-    width: 500px;
-    height: 30px;
-    border-radius: 10px;
-    margin-right: 5px;
-    border: #862451 2px solid;
-}
-
-.btn_busqueda {
-    border:#862451 2px solid;
-    color:#8f265b;
-    font-weight: bold;
-    border-radius: 20px;
-    background-color: rgb(255, 212, 231);
-    width: 80px;
-    height: 30px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.btn_busqueda:hover {
-    color: #ff75ba;
-    border:#ff75ba 2px solid;
-    background-color: rgb(255, 247, 251);
-    letter-spacing: 2px;
-}
-
-.categoria {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: justify;
-    color: rgb(101, 38, 55);
-    border:#862451 2px solid;
-    background-color: rgb(255, 235, 235);
-    border-radius: 5px;
-    padding: 6px;
-    width: 80%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    transition: all 0.5s;
-}
-
-.categoria:hover {
-    color: #ff75ba;
-    border:#ff75ba 2px solid;
-}
-
-.enlace_compra {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;
-    color: rgb(101, 38, 55);
-    border:#862451 2px solid;
-    background-color: rgb(255, 235, 235);
-    border-radius: 5px;
-    padding: 6px;
-    width: 100%;
-    margin-top: 5px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.enlace_compra:hover {
-    color: #ff75ba;
-    border:#ff75ba 2px solid;
-    letter-spacing: 2px;
-}
-
-.btn_filtro {
-    border:#862451 2px solid;
-    color:#8f265b;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 10px;
-    background-color: rgb(255, 212, 231);
-    width: 100px;
-    padding: 4px;
-    margin-top: 7px;
-    margin-left: 10px;
-    height: 50%;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.btn_filtro:hover {
-    color: #ff75ba;
-    border:#ff75ba 2px solid;
-    letter-spacing: 2px;
-    background-color: rgb(255, 247, 251);
 }
 
 

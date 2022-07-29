@@ -1,28 +1,27 @@
 import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="header">
             <div className="header__contenedor">
-                <div className="enlaces_contenedor">
-                    <div className="contenedor_opciones">
-                        <select className="categoria">
-                            <option value="">CATEGORIAS</option>
-                            <option value="monster high">Monster High</option>
-                            <option value="ever after high">Ever After High</option>
-                            <option value="rainbow high">Rainbow High</option>
-                            <option value="barbie">Barbie</option>
-                            <option value="coleccionables">Coleccionables</option>
-                        </select>
-                        <button className="btn_filtro">Filtrar</button>
+                <div className="container_nav">
+                    <Link to="/" className="logo">MY FAIRYTALE</Link>
+                    <div>
+                        <ul className="container_enlaces">
+                            <li className="enlaces">
+                                <Link to="/category/Monster%20High" className="enlaces_text">Monster High</Link>
+                            </li>
+                            <li className="enlaces">
+                                <Link to="/category/Ever%20After%20High" className="enlaces_text">Ever After High</Link>
+                            </li>
+                            <li className="enlaces">
+                                <Link to="/category/Rainbow%20High" className="enlaces_text">Rainbow High</Link>
+                            </li>
+                        </ul>
                     </div>
-                    <button className="enlace_compra">TERMINAR COMPRA</button>
-                </div>
-                <div>
-                    <input type="search" className="input_busqueda" placeholder=" Buscar en la pagina..."/>
-                    <button id="boton_buscar" className="btn_busqueda">Buscar</button>
-
+                    
                 </div>
                 <div>
                     <button className="carrito_botones">
