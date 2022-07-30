@@ -4,11 +4,13 @@
 
 Es un simulador de un Ecommerce de muñecas Monster High, Ever After High y Rainbow High.
 
-La idea general de esta aplicacion es crear un Sistema de E-Commerce para compra de productos con filtrado por categorías usando informacion de un JSON propio llamado asyncMock, el cual contendra la informacion de cada producto y asi lograr que a partir de esta poder lograr mas cosas como:
+La idea general de esta aplicación es crear un Sistema de E-Commerce para compra de productos con filtrado por categorías usando información de un JSON propio llamado asyncMock, el cual contendrá cada producto y así lograr que a partir de esta poder lograr más cosas como: 
 
-- Filtrar u ordenar los productos segun su categoria 
-- Interactuar con cada producto y ver los detalles de este
-- agregar la cantidad de productos deseados al carrito de compras
+- Filtrar u ordenar los productos según su categoría  
+
+- Interactuar con cada producto y ver los detalles de este 
+
+- agregar la cantidad de productos deseados al carrito de compras 
 
 
 ## Que se utilizo hasta el momento para llegar al resultado de la Pre Entrega?
@@ -19,15 +21,15 @@ La idea general de esta aplicacion es crear un Sistema de E-Commerce para compra
 
 ## Que se construyo?
 
-En el proyecto encontraras las categorias de los productos representados en la barra de navegacion para asi hacer un filtrado propio de los productos segun su categoria usando las rutas "/category/:categoryId".
+En el proyecto encontraras las categorías de los productos representados en la barra de navegación para así hacer un filtrado propio de los productos según su categoría usando las rutas "/category/:categoryId". 
 
-Despues se encuentra el componente ItemListContainer, donde estan guardados las cartas de los productos, creadas de forma dinamica atraves de los componentes ItemList y Item, en estas encontraras el boton de "ver detalles", el cual de dirigira hacia la ruta "/detail/:productId" donde encontraras los detalles del producto seleccionado y cuenta con un componente ItemCount, el cual se encarga de contar la cantidad de elementos que quieres agregar a tu carrito de compras.
+Después se encuentra el componente ItemListContainer, donde están guardados las cartas de los productos, creadas de forma dinámica atreves de los componentes ItemList y Item, en estas encontraras el botón de "ver detalles", el cual de dirigirá hacia la ruta "/detail/:productId" donde encontraras los detalles del producto seleccionado y cuenta con un componente ItemCount, el cual se encarga de contar la cantidad de elementos que quieres agregar a tu carrito de compras. 
 
 ## Vistas
 
 ### Vista del Home
 
--
+<img src="/public/images/appCaptura" alt="My cool logo"/>
 
 ## Flow de la App 
 
@@ -39,4 +41,4 @@ Despues se encuentra el componente ItemListContainer, donde estan guardados las 
 
 ### `IMPORTANTE`
 
-este proyecto aun esta en desarrollo, por ende algunas funciones en la fecha actual no esten en su total funcionalidad.
+Este proyecto aun esta en desarrollo, por ende, algunas funciones en la fecha actual no estén en su total funcionalidad. 
