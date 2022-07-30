@@ -37,7 +37,7 @@ Después se encuentra el componente ItemListContainer, donde están guardados la
 
 ## Link de la App
 
-[Deploy](https://tiendaweb-lauraolayaisaza.vercel.app).
+![img](https://i.imgur.com/TQQmcte.gif)
 
 ### `IMPORTANTE`
 
