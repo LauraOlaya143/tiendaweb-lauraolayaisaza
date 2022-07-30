@@ -29,7 +29,7 @@ Después se encuentra el componente ItemListContainer, donde están guardados la
 
 ### Vista del Home
 
-<img src="/public/images/appCaptura" alt="My cool logo"/>
+![img](https://i.imgur.com/toGMwO9.png)
 
 ## Flow de la App 
 
