@@ -21,17 +21,6 @@ const ItemListContainer = (props) => {
                 setLoading(false)
             })
 
-        /*if(params.categoryId){
-            
-        } else {
-            getProducts().then(response =>{
-                setProducts(response)
-            }).catch (error => {
-                console.log(error)
-            }).finally(() => {
-                setLoading(false)
-            })
-        }*/
     }, [categoryId]) 
 
     if(loading) {

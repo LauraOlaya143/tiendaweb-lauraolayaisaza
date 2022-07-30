@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Proyecto final, curso de REACT JS en CODERHOUSE.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## My FairyTale
 
-## Available Scripts
+Es un simulador de un Ecommerce de muñecas Monster High, Ever After High y Rainbow High.
 
-In the project directory, you can run:
+La idea general de esta aplicacion es crear un Sistema de E-Commerce para compra de productos con filtrado por categorías usando informacion de un JSON propio llamado asyncMock, el cual contendra la informacion de cada producto y asi lograr que a partir de esta poder lograr mas cosas como:
 
-### `npm start`
+- Filtrar u ordenar los productos segun su categoria 
+- Interactuar con cada producto y ver los detalles de este
+- agregar la cantidad de productos deseados al carrito de compras
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Que se utilizo hasta el momento para llegar al resultado de la Pre Entrega?
 
-### `npm test`
+- Create-React-App
+- React-router-dom
+- Vercel 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Que se construyo?
 
-### `npm run build`
+En el proyecto encontraras las categorias de los productos representados en la barra de navegacion para asi hacer un filtrado propio de los productos segun su categoria usando las rutas "/category/:categoryId".
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Despues se encuentra el componente ItemListContainer, donde estan guardados las cartas de los productos, creadas de forma dinamica atraves de los componentes ItemList y Item, en estas encontraras el boton de "ver detalles", el cual de dirigira hacia la ruta "/detail/:productId" donde encontraras los detalles del producto seleccionado y cuenta con un componente ItemCount, el cual se encarga de contar la cantidad de elementos que quieres agregar a tu carrito de compras.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Vistas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Vista del Home
 
-### `npm run eject`
+-
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Flow de la App 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Link de la App
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Deploy](https://tiendaweb-lauraolayaisaza.vercel.app).
 
-## Learn More
+### `IMPORTANTE`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+este proyecto aun esta en desarrollo, por ende algunas funciones en la fecha actual no esten en su total funcionalidad.

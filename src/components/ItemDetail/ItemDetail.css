@@ -6,6 +6,15 @@
 
 .img_detail {
     margin-bottom: 30px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.img_product {
+    margin-bottom: 30px;
     margin-left: 40px;
     padding: 10px;
     width: 70%;
@@ -24,4 +33,32 @@
 .text_2 {
     align-items: center;
     text-align: center;
+}
+
+/* inicio de media querie para tableta */
+@media screen and (max-width: 1024px) {
+    .img_detail {
+        padding: 0px;
+        width: 80%;
+        object-fit: cover;
+        margin-bottom: 0px;
+    }
+
+    .img_product {
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 0px;
+        width: 90%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .text_description {
+        margin: 0 auto;
+        width: 60%;
+        text-align: justify;
+        font-size: 20px;
+        padding: 10px;
+        padding-right: 30px;
+    }
 }
