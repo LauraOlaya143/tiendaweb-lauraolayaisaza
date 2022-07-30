@@ -33,11 +33,11 @@ Después se encuentra el componente ItemListContainer, donde están guardados la
 
 ## Flow de la App 
 
-![](https://i.imgur.com/TQQmcte.gif)
+![img](https://i.imgur.com/TQQmcte.gif)
 
 ## Link de la App
 
-![img](https://i.imgur.com/TQQmcte.gif)
+[Deploy](https://tiendaweb-lauraolayaisaza.vercel.app).
 
 ### `IMPORTANTE`
 
