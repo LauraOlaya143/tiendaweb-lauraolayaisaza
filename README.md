@@ -33,7 +33,7 @@ Después se encuentra el componente ItemListContainer, donde están guardados la
 
 ## Flow de la App 
 
-<iframe class="imgur-embed" width="100%" height="1036" frameborder="0" src="https://i.imgur.com/TQQmcte.gifv#embed"></iframe>
+![](https://i.imgur.com/TQQmcte.gif)
 
 ## Link de la App
 
