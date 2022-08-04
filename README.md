@@ -33,7 +33,7 @@ Después se encuentra el componente ItemListContainer, donde están guardados la
 
 ## Flow de la App 
 
-![](https://i.imgur.com/TQQmcte.gif)
+![Alt text](https://media.giphy.com/media/LlogbtSVVoiTrzM792/giphy.gif)
 
 ## Link de la App
 
