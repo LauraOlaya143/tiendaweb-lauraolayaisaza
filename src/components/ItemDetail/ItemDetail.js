@@ -20,7 +20,7 @@ const ItemDetail = ({product}) => {
                 <h3>{product.name}</h3>
                 <h4>{product.price} $</h4>
                 <div className="text_2">
-                    { quantity > 0 ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount stock={product.stock} valInicial={0} onAdd={onAdd}/>}
+                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Ir al carrito</Link> : <ItemCount stock={product.stock} valInicial={0} onAdd={onAdd}/>}
                 </div>
                 
                 <p>{product.description}</p>
