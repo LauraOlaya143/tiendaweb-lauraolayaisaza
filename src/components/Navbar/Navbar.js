@@ -11,7 +11,7 @@ const Navbar = ({ pages }) => {
                     <div>
                         <ul className="container_enlaces">
                         {pages.map((page) => (
-                            <li className="enlaces">
+                            <li className="enlaces" key={page.name}>
                                 <Link to={page.url} className="enlaces_text">{page.name}</Link>
                             </li>
                         ))}
