@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import "./ItemCount.css"
 
-const ItemCount = ({ stock, valInicial, onAdd }) => {
-    const [count, setCount] = useState(0)
+const ItemCount = ({ stock, initial = 0, onAdd }) => {
+    const [quantity, setQuantity] = useState(initial)
 
     const min = () => {
-        if ( count > valInicial) {
-            setCount(count - 1)
+        if ( quantity > 0) {
+            setQuantity(quantity - 1)
         }
     }
 
     const plus = () => {
-        if ( count < stock) {
-            setCount(count + 1)
+        if ( quantity < stock) {
+            setQuantity(quantity + 1)
         }
     }
 
@@ -21,12 +21,12 @@ const ItemCount = ({ stock, valInicial, onAdd }) => {
             <div className="count count_container">
                 <div className="count">
                     <button onClick={min} className="buttons"> - </button>
-                    <h5 className="elements">{count}</h5>
+                    <h5 className="elements">{quantity}</h5>
                     <button onClick={plus} className="buttons"> + </button>
                 </div>
             </div>
             <div>
-                <button onClick={() => onAdd(count)} className="button">Agregar al carrito</button>
+                <button onClick={() => onAdd(quantity)} className="button">Agregar al carrito</button>
             </div>
             
         </div>

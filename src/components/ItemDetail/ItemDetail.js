@@ -6,17 +6,15 @@ import { CartContext } from '../../context/CartContext'
 
 const ItemDetail = ({id, name, img, category, price, description, stock}) => {
     const [quantity, setQuantity] = useState(0)
-    const { addItem } = useContext(CartContext)
+    const { addItem, getProductQuantity } = useContext(CartContext)
 
-    const onAdd = (quantity) => {
-        if (quantity > 0){
-            alert("Cantidad de productos agregados " + quantity)
-            setQuantity(quantity)
-            addItem({id, name, price, quantity})
-        } else {
-            alert("No seleccionaste la cantidad que deseas")
-        }
-        
+    const quantityAdded = getProductQuantity(id)
+
+    const onAdd  = (quantity) => {
+        console.log('agregue al carrito')
+        console.log(quantity)
+        setQuantity(quantity)
+        addItem({id, name, price, quantity})
     }
     return (
         <div key={id} className="item_card">
@@ -28,7 +26,7 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
                 <h3>{name}</h3>
                 <h4>{price} $</h4>
                 <div className="text_2">
-                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Ir al carrito</Link> : <ItemCount stock={stock} valInicial={0} onAdd={onAdd}/>}
+                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Ir al carrito</Link> : <ItemCount stock={stock} initial={quantityAdded} onAdd={onAdd}/>}
                 </div>
                 
                 <p>{description}</p>
