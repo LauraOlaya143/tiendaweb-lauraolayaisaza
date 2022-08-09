@@ -1,3 +1,5 @@
+// esta es la app
+
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -21,7 +23,7 @@ function App() {
             <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a My FairyTale!" />}/>
             <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>
             <Route path="/category/:categoryId" element={<ItemListContainer greeting="¡Filtro de nuestros productos!"/>}/>
-            <Route path="/cart" element={<h1>ESTE ES TU CARRITO :D</h1>}/>
+            <Route path="/cart" element={<h1>Hola</h1>}/>
           </Routes>
         </BrowserRouter>
       </CartContextProvider>  
