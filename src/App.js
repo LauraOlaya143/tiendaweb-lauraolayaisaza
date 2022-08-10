@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartContextProvider } from './context/CartContext';
+import CartContainer from './components/CartContainer/CartContainer';
 
 const PAGES = [
   { name: "Monster High", url: "/category/Monster%20High" },
@@ -23,7 +24,7 @@ function App() {
             <Route path="/" element={<ItemListContainer greeting="¡Bienvenido a My FairyTale!" />}/>
             <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>
             <Route path="/category/:categoryId" element={<ItemListContainer greeting="¡Filtro de nuestros productos!"/>}/>
-            <Route path="/cart" element={<h1>Hola</h1>}/>
+            <Route path="/cart" element={<CartContainer/>}/>
           </Routes>
         </BrowserRouter>
       </CartContextProvider>  
