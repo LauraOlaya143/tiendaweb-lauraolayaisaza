@@ -51,6 +51,31 @@
 }
 
 .button_cart:hover {
+    background-color: #ff75ba;
+    border: #ff75ba 2px solid;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.button_compra {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(255, 235, 235);
+    border:#862451 2px solid;
+    background-color: #862451;
+    border-radius: 5px;
+    padding: 6px;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button_compra:hover {
+    background-color: #ff75ba;
+    border: #ff75ba 2px solid;
     color: #ffffff;
     letter-spacing: 2px;
 }
@@ -58,4 +83,25 @@
 .greeting {
     font-family: 'Gentium Plus', serif;
     font-size: 40px;
+}
+
+.greeting_container {
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.greeting_noItem {
+    font-family: 'Gentium Plus', serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-right: 20px;
+    letter-spacing: 2px;
+    color:rgb(101, 38, 55);
+    transition: all 0.5s;
+}
+
+.greeting_noItem:hover {
+    color: #ff75ba;
 }

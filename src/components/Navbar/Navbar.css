@@ -76,7 +76,7 @@
 
 .iconos {
     font-size: 1.5rem;
-    padding: 20px;
+    padding-right: 20px;
     color:rgb(255, 225, 238);
     transition: all 0.5s;
     cursor: pointer;

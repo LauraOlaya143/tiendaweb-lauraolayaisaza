@@ -1,6 +1,6 @@
 import CartItem from '../CartItem/CartItem'
 
-const CartList = ({products}) => {
+const Cart = ({products}) => {
     return(
         <div className="contenedor_cartas">
             {products.map(product => (
@@ -10,4 +10,4 @@ const CartList = ({products}) => {
         )
 }
 
-export default CartList
+export default Cart
