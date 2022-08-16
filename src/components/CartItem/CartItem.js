@@ -5,7 +5,7 @@ const CartItem = ({product}) => {
 
     const { removeItem } = useContext(CartContext)
 
-    const handleRemove = (id) => {
+    const Remove = (id) => {
         removeItem(id)
     }
     return (
@@ -17,7 +17,7 @@ const CartItem = ({product}) => {
                 <h4 className="text2">SubTotal: {product.price * product.quantity}</h4>
             </div>
             <div>
-                <button className="button_cart" onClick={() => handleRemove(product.id)}>Remove</button>
+                <button className="button_cart" onClick={() => Remove(product.id)}>Remove</button>
             </div>
         </div>
     )

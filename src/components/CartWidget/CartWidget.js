@@ -14,7 +14,6 @@ const CartWidget = () => {
                 <i className='fas fa-cart-plus iconos'></i>
                 <p className='number'>{quantity}</p>
             </Link>
-            
         </div>
     )
 };
