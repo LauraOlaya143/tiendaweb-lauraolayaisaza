@@ -9,25 +9,25 @@ const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const {categoryId} = useParams()
+    const {category} = useParams()
 
     useEffect(() =>{
 
-        const collectionRef = !categoryId ? collection(database, 'products') : query(collection(database, 'products'), where('category', '==', categoryId))
+        const collectionRef = !category ? collection(database, 'products') : query(collection(database, 'products'), where('category', '==', category))
 
         getDocs(collectionRef).then(response =>{
-            const products = response.docs.map(doc => {
-                const values = doc.data()
-                return { id : doc.id, ...values}
+            const productsDB = response.docs.map(doc => {
+                const data = doc.data()
+                return { id : doc.id, ...data}
             })
-            setProducts(products)
+            setProducts(productsDB)
         }).catch(error => {
             console.log(error)
         }).finally(()=> {
             setLoading(false)
         })
 
-    }, [categoryId]) 
+    }, [category]) 
 
     if(loading) {
         return <div className="loader"></div>

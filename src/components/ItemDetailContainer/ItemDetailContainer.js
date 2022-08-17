@@ -14,9 +14,9 @@ const ItemListContainer = () => {
     useEffect(() =>{
 
         getDoc(doc(database, 'products', productId)).then(response =>{
-            const values = response.data()
-            const product = { id : response.id, ...values}
-            setProduct(product)
+            const data = response.data()
+            const productDB = { id : response.id, ...data}
+            setProduct(productDB)
         }).catch(error => {
             console.log(error)
         }).finally(()=>{

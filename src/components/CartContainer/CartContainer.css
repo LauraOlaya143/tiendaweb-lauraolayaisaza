@@ -17,17 +17,21 @@
     padding: 10px;
     align-items: justify;
     text-align: justify;
+}
+
+.text_card {
+    color:rgb(101, 38, 55);
+    text-decoration: none;
+    margin-top: 10px;
+    width: 100%;
+    text-align: justify;
+    font-size: 20px;
+    padding: 0px;
     transition: all 0.5s;
 }
 
-.card_cart:hover { 
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.507);
-}
-
-.text_1 {
-    display: flex;
-    align-items: justify;
-    line-height: 1.2em;
+.text_card:hover {
+    color: #ff75ba;
 }
 
 .text2 {

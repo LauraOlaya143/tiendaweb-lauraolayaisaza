@@ -7,10 +7,10 @@ import Cart from '../Cart/Cart'
 const CartContainer = () => {
     const { cart, getQuantity, getTotal, clearCart} = useContext(CartContext)
 
-    const totalQuantity = getQuantity()
+    const quantity = getQuantity()
     const total = getTotal()
 
-    if(totalQuantity === 0) {
+    if(quantity === 0) {
         return (
             <div className="greeting_container">
                 <h1 className="greeting">No tienes ningun producto en tu carrito</h1>

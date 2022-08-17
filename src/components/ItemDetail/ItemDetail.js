@@ -3,19 +3,35 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({id, name, img, category, price, description, stock}) => {
     const [quantity, setQuantity] = useState(0)
-    const { addItem, getProductQuantity } = useContext(CartContext)
+    const { addProduct, getProductQuantity } = useContext(CartContext)
 
     const quantityAdded = getProductQuantity(id)
 
-    const onAdd  = (quantity) => {
-        console.log('agregue al carrito')
-        console.log(quantity)
+    const linkToCart = () => (
+        <div>
+            <Link to='/cart' className="link_tostify">¡El producto se agrego al carrito con exito!</Link>
+        </div>
+    );
+
+    const AddItem  = (quantity) => {
         setQuantity(quantity)
-        addItem({id, name, price, quantity})
+        addProduct({id, name, price, quantity})
+        toast.success(linkToCart, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     }
+
     return (
         <div key={id} className="item_card">
             <div className="img_detail">
@@ -26,7 +42,8 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
                 <h3>{name}</h3>
                 <h4>{price} $</h4>
                 <div className="text_2">
-                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Ir al carrito</Link> : <ItemCount stock={stock} initial={quantityAdded} onAdd={onAdd}/>}
+                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Ver Carrito</Link> : <ItemCount stock={stock} initial={quantityAdded} onAdd={AddItem}/>}
+                    <ToastContainer />
                 </div>
                 
                 <p>{description}</p>

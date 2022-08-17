@@ -22,7 +22,6 @@ const Navbar = ({ pages }) => {
                     <button className="carrito_botones">
                         <CartWidget />
                     </button>
-                    
                 </div>
             </div>
         </nav>
