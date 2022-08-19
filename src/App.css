@@ -46,6 +46,10 @@ body {
   pointer-events: none;
 }
 
+.no_number{
+  display: none;
+}
+
 .button_detalle {
   display: inline-block;
   text-decoration: none;
@@ -68,6 +72,21 @@ body {
   border: #ff75ba 2px solid;
   color: #ffffff;
   letter-spacing: 2px;
+}
+
+.btn_noStock {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  color: #864a67;
+  border:#864a67 2px solid;
+  background-color:rgb(230, 217, 217);
+  border-radius: 5px;
+  padding: 6px;
+  width: 60%;
+  margin-top: 5px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

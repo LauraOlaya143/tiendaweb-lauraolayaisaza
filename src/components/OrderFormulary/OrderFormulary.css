@@ -1,0 +1,49 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 20px;
+}
+
+.tittle_formulary {
+    font-family: 'Gentium Plus', serif;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    font-size: 4em;
+    line-height: 1.2em;
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin: 0 auto;
+}
+
+.subTittle_formulary {
+    font-family: 'Gentium Plus', serif;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.2em;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.subTittle_formulary:hover {
+    color: #ff75ba
+}
+
+.formulario_input {
+    height: 20px;
+    border: none;
+    color: rgb(101, 38, 55);
+    border-bottom: rgb(101, 38, 55) solid 2px;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.formulario_input:focus {
+    border-bottom: 2px solid #ff75ba;
+}
+

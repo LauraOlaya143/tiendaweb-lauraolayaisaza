@@ -13,7 +13,7 @@ const ItemListContainer = (props) => {
 
     useEffect(() =>{
 
-        const collectionRef = !category ? collection(database, 'products') : query(collection(database, 'products'), where('category', '==', category))
+        const collectionRef = category ? query(collection(database, 'products'), where('category', '==', category)) : collection(database, 'products')
 
         getDocs(collectionRef).then(response =>{
             const productsDB = response.docs.map(doc => {

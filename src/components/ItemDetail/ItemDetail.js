@@ -1,5 +1,6 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import NoStock from "../NoStock/NoStock"
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
@@ -41,11 +42,13 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
                 <h4>{category}</h4>
                 <h3>{name}</h3>
                 <h4>{price} $</h4>
-                <div className="text_2">
+                <div className={`${stock === 0 ? 'no_number' : 'text_2'}`}>
                     { quantity > 0 ? <Link to='/cart' className="button_detalle">Ver Carrito</Link> : <ItemCount stock={stock} initial={quantityAdded} onAdd={AddItem}/>}
                     <ToastContainer />
                 </div>
-                
+                <div className={`${stock > 0 ? 'no_number' : 'text_2'}`}>
+                    <NoStock/>
+                </div>
                 <p>{description}</p>
             </div>
             

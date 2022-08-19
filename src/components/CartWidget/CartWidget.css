@@ -13,11 +13,6 @@
     font-size: 22px;
 }
 
-.no_number{
-    display: none;
-}
-
-
 /* inicio de media querie para tableta */
 @media screen and (max-width: 1024px) {
     .number {

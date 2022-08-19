@@ -28,7 +28,7 @@ const CartContainer = () => {
             <h3 className="greeting">TOTAL: ${total}</h3>
             <div>
                 <button className="button_compra" onClick={() => clearCart()}>Limpiar Carrito</button>
-                <button className="button_compra">Generar Orden</button>
+                <Link className="button_order" to="/orderdata">Generar Orden</Link>
             </div>
         </div>
     )

@@ -41,9 +41,9 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const getProductQuantity = (id) => {
-        const product = cart.find(prod => prod.id === id)
+        const productById = cart.find(prod => prod.id === id)
 
-        return product?.quantity
+        return productById?.quantity
     }
 
     const getTotal = () => cart.reduce((total, prod) => (total += prod.quantity * prod.price), 0);

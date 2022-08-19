@@ -84,6 +84,30 @@
     letter-spacing: 2px;
 }
 
+.button_order {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(255, 235, 235);
+    border:#862451 2px solid;
+    background-color: #862451;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: 5px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button_order:hover {
+    background-color: #ff75ba;
+    border: #ff75ba 2px solid;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
 .greeting {
     font-family: 'Gentium Plus', serif;
     font-size: 40px;
