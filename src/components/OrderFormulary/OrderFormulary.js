@@ -29,24 +29,25 @@ const OrderFormulary = () => {
                 });
         } else {
             if( cart.length > 0 ) {
+                const phoneNumber = parseInt(phone)
                 const dbRef = collection(database, 'products')
+                const ordersRef = collection(database,"orders")
+                const cartIds = cart.map(product => product.id)
+                const noStock = []
+                const myBatch = writeBatch(database)
                 const clientInfo = { 
                     client: {
                         name: name,
                         email: email,
-                        phone: phone
+                        phone: phoneNumber
                     },
                     items: cart,
                     total,
                     date: Timestamp.fromDate(new Date())
                 }
-                const cartIds = cart.map(product => product.id)
-                console.log(cartIds)
+                
                 const productsadded = await getDocs(query(dbRef, where(documentId(), 'in', cartIds)))
-                const noStock = []
                 const { docs } = productsadded
-                const myBatch = writeBatch(database)
-
                 docs.forEach(prod => {
                     const data = prod.data()
                     const dataBaseStock = data.stock
@@ -61,7 +62,7 @@ const OrderFormulary = () => {
                     }
                 })
                 if(noStock.length === 0){
-                    const addOrder = await addDoc(collection(database,"orders"), clientInfo)
+                    const addOrder = await addDoc(ordersRef, clientInfo)
                     const idCompra = addOrder.id
                     myBatch.commit()
                     toast.success("La orden se agrego con exito, el ID de tu compra es: " + idCompra, {
@@ -88,8 +89,6 @@ const OrderFormulary = () => {
                         progress: undefined,
                     });
                 }
-                
-                
                 } else {
                     toast.error("No se pudo generar la compra ya que el carrito esta vacio", {
                         position: "top-right",

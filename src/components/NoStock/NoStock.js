@@ -1,7 +1,7 @@
 const NoStock = () => {
     return(
         <div>
-            <button class="btn_noStock">No stock</button>
+            <button className="btn_noStock">No stock</button>
         </div>
     )
 }

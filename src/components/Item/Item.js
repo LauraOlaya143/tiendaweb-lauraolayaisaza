@@ -5,7 +5,7 @@ const Item = ({product}) => {
         <Link to={`/detail/${product.id}`} className="card">
             <div key={product.id}>
                 <img className="img" src={product.img} alt={product.name} />
-                <h4 className="text_cart">{product.name}</h4>
+                <h4 className="text_cart">{product.tittle}</h4>
                 <h4 className="text_cart">{product.price} $</h4>
                 <Link to={`/detail/${product.id}`} className="button_detalle">Ver Detalle</Link>
             </div>

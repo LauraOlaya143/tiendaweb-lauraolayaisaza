@@ -1,36 +1,25 @@
-import { useState, useEffect } from 'react'
-//import { getProduct } from '../../asyncMock'
+import {useAsyncCall } from '../../hooks/useAsyncCall'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import { getDoc, doc } from 'firebase/firestore'
-import { database } from "../../services/firebase"
+import { getProductById } from '../../services/firebase/firestore'
+import { fetcher } from '../../utils/fetcher'
 
 const ItemListContainer = () => {
-
-    const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true)
     const { productId } = useParams()
 
-    useEffect(() =>{
-
-        getDoc(doc(database, 'products', productId)).then(response =>{
-            const data = response.data()
-            const productDB = { id : response.id, ...data}
-            setProduct(productDB)
-        }).catch(error => {
-            console.log(error)
-        }).finally(()=>{
-            setLoading(false)
-        })
-    }, [productId ]) 
+    const {loading, data, error} = useAsyncCall(fetcher(getProductById,productId), [productId])
 
     if(loading) {
         return <div className="loader"></div>
     }
 
+    if(error) {
+        return <h1>Hubo un error en la pagina :C</h1>
+    }
+
     return (
         <div className="itemdetail">
-            <ItemDetail {...product}/>
+            <ItemDetail {...data}/>
         </div>
     )
 };
