@@ -25,6 +25,20 @@
     margin-right: 20px;
 }
 
+.buttonDisabled {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #8b566f;
+    border:#86586e 2px solid;
+    background-color:rgb(230, 217, 217);
+    border-radius: 5px;
+    transition: all 0.5s;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .buttons:hover {
     color: #ff75ba;
     border:#ff75ba 2px solid;

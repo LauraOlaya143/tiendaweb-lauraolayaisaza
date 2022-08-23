@@ -1,12 +1,19 @@
 import './OrderFormulary.css';
 import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom';
 import { addDoc, collection, getDocs, Timestamp, query, where, documentId, writeBatch} from 'firebase/firestore'
 import { database } from "../../services/firebase"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const OrderFormulary = () => {
+
+    const linkToMain = (idCompra) => (
+        <div>
+            <Link to='/' className="link_tostify">The order was added successfully, the ID of your purchase is:{idCompra}</Link>
+        </div>
+    );
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -18,7 +25,7 @@ const OrderFormulary = () => {
     const submitInfo = async () => {
     try{
         if(name === "" || email === "" || !phone){
-            toast.error("No puede realizar la compra ya que falta informacion", {
+            toast.error("You cannot make the purchase because information is missing.", {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -65,7 +72,7 @@ const OrderFormulary = () => {
                     const addOrder = await addDoc(ordersRef, clientInfo)
                     const idCompra = addOrder.id
                     myBatch.commit()
-                    toast.success("La orden se agrego con exito, el ID de tu compra es: " + idCompra, {
+                    toast.success(linkToMain(idCompra), {
                         position: "top-center",
                         autoClose: false,
                         hideProgressBar: false,
@@ -79,7 +86,7 @@ const OrderFormulary = () => {
                     setPhone("")
                     clearCart()
                 }else{
-                    toast.error("No se pudo generar la compra ya que hay un producto fuera de stock", {
+                    toast.error("The purchase could not be generated as there is a product out of stock", {
                         position: "top-right",
                         autoClose: 2000,
                         hideProgressBar: false,
@@ -90,7 +97,7 @@ const OrderFormulary = () => {
                     });
                 }
                 } else {
-                    toast.error("No se pudo generar la compra ya que el carrito esta vacio", {
+                    toast.error("The purchase could not be generated since the cart is empty", {
                         position: "top-right",
                         autoClose: 2000,
                         hideProgressBar: false,
@@ -108,7 +115,7 @@ const OrderFormulary = () => {
 
     return (
         <div>
-            <h1 className="tittle_formulary">¡Finalizá tu compra!</h1>
+            <h1 className="tittle_formulary">Finish your purchase!</h1>
             <div className="formulario">
                 <form>
                     <div className="formulario">

@@ -15,7 +15,7 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
 
     const linkToCart = () => (
         <div>
-            <Link to='/cart' className="link_tostify">¡El producto se agrego al carrito con exito!</Link>
+            <Link to='/cart' className="link_tostify">Product added to cart successfully!</Link>
         </div>
     );
 
@@ -43,7 +43,7 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
                 <h3>{name}</h3>
                 <h4>{price} $</h4>
                 <div className={`${stock === 0 ? 'no_number' : 'text_2'}`}>
-                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Ver Carrito</Link> : <ItemCount stock={stock} initial={quantityAdded} onAdd={AddItem}/>}
+                    { quantity > 0 ? <Link to='/cart' className="button_detalle">Show Car</Link> : <ItemCount stock={stock} initial={quantityAdded} onAdd={AddItem}/>}
                     <ToastContainer />
                 </div>
                 <div className={`${stock > 0 ? 'no_number' : 'text_2'}`}>

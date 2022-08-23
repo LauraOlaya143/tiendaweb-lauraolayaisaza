@@ -43,6 +43,12 @@ Al darle al botón de finalizar tu compra, te guiara a la ruta "/orderdata" dond
 
 ![img](https://i.imgur.com/toGMwO9.png)
 
+### Vista del item detail
+
+### Vista del carrito de compras
+
+### Vista del formulario para finalizar tu compra
+
 ## Flow de la App 
 
 ![Alt text](https://media.giphy.com/media/LlogbtSVVoiTrzM792/giphy.gif)

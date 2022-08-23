@@ -13,22 +13,22 @@ const CartContainer = () => {
     if(quantity === 0) {
         return (
             <div className="greeting_container">
-                <h1 className="greeting">No tienes ningun producto en tu carrito</h1>
-                <Link className="greeting_noItem" to="/">¡Mira nuestros productos aqui!</Link>
+                <h1 className="greeting">You have no items in your cart</h1>
+                <Link className="greeting_noItem" to="/">Check out our products here!</Link>
             </div>
         )
     }
 
     return (
         <div>
-            <h1 className="greeting">¡Este es tu carrito!</h1>
+            <h1 className="greeting">This is your cart!</h1>
             <div>
                 <Cart products={cart}/>
             </div>
             <h3 className="greeting">TOTAL: ${total}</h3>
             <div>
-                <button className="button_compra" onClick={() => clearCart()}>Limpiar Carrito</button>
-                <Link className="button_order" to="/orderdata">Generar Orden</Link>
+                <button className="button_compra" onClick={() => clearCart()}>Clear Cart</button>
+                <Link className="button_order" to="/orderdata">Generate Order</Link>
             </div>
         </div>
     )
