@@ -32,7 +32,7 @@
     font-weight: bold;
     color: #8b566f;
     border:#86586e 2px solid;
-    background-color:rgb(230, 217, 217);
+    background-color:rgba(230, 217, 217, 0.829);
     border-radius: 5px;
     transition: all 0.5s;
     margin-left: 20px;
