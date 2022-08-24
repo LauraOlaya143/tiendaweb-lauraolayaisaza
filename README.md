@@ -62,7 +62,7 @@ Al darle al botón de finalizar tu compra, te guiara a la ruta "/orderdata" dond
 
 ## Flow de la App 
 
-![Alt text](https://media.giphy.com/media/KBa2JqcPqZ0KPxyjNk/giphy.gif)
+![Alt text](https://media.giphy.com/media/KBa2JqcPqZ0KPxyjNk/giphy-downsized.gif)
 
 ## Link de la App
 
