@@ -1,0 +1,13 @@
+.footer {
+    background-color: #ac7d88c7;
+    background: linear-gradient(to right, #ffb9ac, #b3487d);
+    width: 100%;
+    min-height: 40px;
+}
+
+.footer_letra {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 10px;
+    color:rgb(242, 226, 221);
+}
