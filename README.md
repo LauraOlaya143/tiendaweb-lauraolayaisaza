@@ -26,6 +26,7 @@ La idea general de esta aplicación es crear un Sistema de E-Commerce para compr
 - Vercel 
 - Firebase
 - toastify (Para generar alertas con un mejor estilo)
+- Bootstrap (Para simplificar el responsive del NavBar)
 
 ## Que se construyo?
 

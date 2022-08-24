@@ -8,7 +8,6 @@ import OrderFormulary from './components/OrderFormulary/OrderFormulary';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartContextProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer/CartContainer';
-import Footer from './components/Footer/Footer'
 
 const PAGES = [
   { name: "Monster High", url: "/category/Monster%20High" },
@@ -29,7 +28,6 @@ function App() {
             <Route path="/cart" element={<CartContainer/>}/>
             <Route path="/orderdata" element={<OrderFormulary/>}/>
           </Routes>
-          <Footer/>
         </BrowserRouter>
       </CartContextProvider>  
     </div>

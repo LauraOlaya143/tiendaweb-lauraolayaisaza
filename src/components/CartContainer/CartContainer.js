@@ -26,9 +26,9 @@ const CartContainer = () => {
                 <Cart products={cart}/>
             </div>
             <h3 className="greeting">TOTAL: ${total}</h3>
-            <div className="buttons_container">
+            <div>
                 <button className="button_compra" onClick={() => clearCart()}>Clear Cart</button>
-                <button className="button_compra" onClick={() => clearCart()}><Link className="button_order" to="/orderdata">Generate Order</Link></button>
+                <Link className="button_order" to="/orderdata">Generate Order</Link>
             </div>
         </div>
     )
