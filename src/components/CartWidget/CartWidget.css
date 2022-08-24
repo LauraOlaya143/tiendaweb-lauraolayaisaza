@@ -1,25 +1,33 @@
 .div_principal {
+    display: block;
+    margin-top: 10px;
+}
+
+.div_icon {
     display: flex;
+    text-decoration: none;
 }
 
 .number {
     color:#fff;
-    position: absolute;
     background-color: #ff0048;
-    right: 58px;
-    top: -10px;
     width: 28px;
     border-radius: 50%;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 /* inicio de media querie para tableta */
 @media screen and (max-width: 1024px) {
     .number {
-        right: 18px;
-        top: 2px;
-        width: 26px;
-        border-radius: 50%;
-        font-size: 22px;
+        width: 25px;
+        font-size: 15px;
+    }
+}
+
+/* inicio de media querie para mobile */
+@media screen and (max-width: 600px) {
+    .number {
+        width: 25px;
+        font-size: 15px;
     }
 }

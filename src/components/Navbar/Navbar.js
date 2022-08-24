@@ -1,31 +1,31 @@
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ pages }) => {
+const HomeNavbar = ({ pages }) => {
     return (
-        <nav className="header">
-            <div className="header__contenedor">
-                <div className="container_nav">
-                    <Link to="/" className="logo">MY FAIRYTALE</Link>
-                    <div>
-                        <ul className="container_enlaces">
-                        {pages.map((page) => (
-                            <li className="enlaces" key={page.name}>
-                                <Link to={page.url} className="enlaces_text">{page.name}</Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <button className="carrito_botones">
-                        <CartWidget />
-                    </button>
-                </div>
-            </div>
-        </nav>
+        <Navbar bg="light" expand="lg" className="header">
+        <Container>
+        <Navbar.Brand><Link to="/" className="logo">MY FAIRYTALE</Link></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            {pages.map((page) => (
+              <Nav.Link className="enlaces" key={page.name}><Link to={page.url} className="enlaces_text">{page.name}</Link></Nav.Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+        <Navbar.Collapse className="justify-content-end">
+          <button className="carrito_botones">
+            <CartWidget />
+          </button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     );
 };
 
-export default Navbar;
+export default HomeNavbar;

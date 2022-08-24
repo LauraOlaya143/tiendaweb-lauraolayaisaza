@@ -20,9 +20,9 @@ const ItemCount = ({ stock, initial = 0, onAdd }) => {
         <div className="container">
             <div className="count count_container">
                 <div className="count">
-                    <button onClick={minus} className={`${quantity === 0 ? 'buttonDisabled' : 'buttons'}`}> - </button>
+                    <button onClick={minus} className={`${quantity === 0 ? 'buttonDisabled' : 'buttonsCount'}`}> - </button>
                     <h5 className="elements">{quantity}</h5>
-                    <button onClick={plus} className={`${quantity === stock ? 'buttonDisabled' : 'buttons'}`}> + </button>
+                    <button onClick={plus} className={`${quantity === stock ? 'buttonDisabled' : 'buttonsCount'}`}> + </button>
                 </div>
             </div>
             <div>

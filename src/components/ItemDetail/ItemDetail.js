@@ -49,7 +49,10 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
                 <div className={`${stock > 0 ? 'no_number' : 'text_2'}`}>
                     <NoStock/>
                 </div>
-                <p>{description}</p>
+                <div className="description">
+                    <p >{description}</p>
+                </div>
+                
             </div>
             
         </div>

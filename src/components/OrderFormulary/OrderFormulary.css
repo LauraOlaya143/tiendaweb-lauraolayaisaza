@@ -47,3 +47,31 @@
     border-bottom: 2px solid #ff75ba;
 }
 
+@media screen and (max-width: 1024px) {
+    .tittle_formulary {
+        font-size: 3em;
+        line-height: 1.2em;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .formulario {
+        width: 80%;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* inicio de media querie para mobile */
+@media screen and (max-width: 600px) {
+    .tittle_formulary {
+        font-size: 2em;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+}
+

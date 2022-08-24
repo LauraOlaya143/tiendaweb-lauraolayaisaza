@@ -9,6 +9,14 @@ body {
   
 }
 
+*, ::after, ::before {
+  box-sizing:initial;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 40px;
+}
+
 ::selection {
   background-color: #ff86a0;
   color: #ffe7f2; 
@@ -78,7 +86,7 @@ body {
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   color: #864a67;
   border:#864a67 2px solid;
@@ -86,7 +94,7 @@ body {
   border-radius: 5px;
   padding: 6px;
   width: 60%;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

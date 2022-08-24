@@ -10,9 +10,9 @@
     padding: 20px;
 }
 
-.buttons {
+.buttonsCount {
     height: 40px;
-    width: 40px;
+    width: 30px;
     font-size: 25px;
     font-weight: bold;
     border:#862451 2px solid;
@@ -23,11 +23,12 @@
     cursor: pointer;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .buttonDisabled {
     height: 40px;
-    width: 40px;
+    width: 30px;
     font-size: 25px;
     font-weight: bold;
     color: #8b566f;
@@ -37,6 +38,7 @@
     transition: all 0.5s;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .buttons:hover {

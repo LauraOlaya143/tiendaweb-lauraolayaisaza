@@ -10,7 +10,7 @@ const CartWidget = () => {
 
     return (
         <div className={`${quantity === 0 ? 'no_number' : 'div_principal'}`}>
-            <Link to='/cart'>
+            <Link to='/cart' className="div_icon">
                 <i className='fas fa-cart-plus iconos'></i>
                 <p className='number'>{quantity}</p>
             </Link>

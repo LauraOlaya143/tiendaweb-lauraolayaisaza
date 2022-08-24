@@ -1,7 +1,7 @@
 // esta es la app
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import HomeNavbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import OrderFormulary from './components/OrderFormulary/OrderFormulary';
@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <CartContextProvider>
         <BrowserRouter>
-          <Navbar pages={PAGES}/>
+          <HomeNavbar pages={PAGES}/>
           <Routes>
             <Route path="/" element={<ItemListContainer/>}/>
             <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>

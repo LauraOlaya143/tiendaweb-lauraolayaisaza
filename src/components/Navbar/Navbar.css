@@ -75,7 +75,8 @@
 
 .iconos {
     font-size: 1.5rem;
-    padding-right: 20px;
+    margin-top: 2px;
+    padding-right: 5px;
     color:rgb(255, 225, 238);
     transition: all 0.5s;
     cursor: pointer;
@@ -101,5 +102,10 @@
         letter-spacing: 2px;
         color: #fff2e5;
         transition: all 0.5s;
+    }
+
+    .enlaces {
+        margin-right: 0px;
+        margin-bottom: 10px;
     }
 }
