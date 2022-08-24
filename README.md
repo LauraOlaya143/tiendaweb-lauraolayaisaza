@@ -42,9 +42,12 @@ Al darle al botón de finalizar tu compra, te guiara a la ruta "/orderdata" dond
 
 ### Vista del Home
 
-![img](https://i.imgur.com/toGMwO9.png)
+![img](https://i.imgur.com/nPxkoyL.png)
 
 ### Vista del item detail
+
+### Vista del Home filtrado segun la categoria elegida
+
 
 ### Vista del carrito de compras
 
