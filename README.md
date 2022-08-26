@@ -32,7 +32,7 @@ La idea general de esta aplicación es crear un Sistema de E-Commerce para compr
 
 En el proyecto encontraras las categorías de los productos representados en la barra de navegación para así hacer un filtrado propio de los productos según su categoría usando las rutas "/category/:categoryId". 
 
-Después se encuentra el componente ItemListContainer, donde están guardados las cartas de los productos, creadas de forma dinámica atreves de los componentes ItemList y Item, en estas encontraras el botón de "ver detalles", el cual de dirigirá hacia la ruta "/detail/:productId" donde encontraras los detalles del producto seleccionado y cuenta con un componente ItemCount, el cual se encarga de contar la cantidad de elementos que quieres agregar a tu carrito de compras. 
+Después se encuentra el componente ItemListContainer, donde están guardados las cartas de los productos, creadas de forma dinámica atreves de los componentes ItemList y Item, en estas encontraras el botón de "ver detalles", el cual de dirigirá hacia la ruta "/detail/:productId" donde encontraras los detalles del producto seleccionado y cuenta con un componente ItemCount, el cual se encarga de contar la cantidad de elementos que quieres agregar a tu carrito de compras, además de que si el producto no cuenta con stock disponible se mostrara un cartel indicándolo (como se ve en el ejemplo de la muñeca Raven Queen). 
 
 Luego de agregar los productos aparecerá el de carrito de compras con la cantidad de productos que este contenga, al darle click a este icono te dirigirá a la ruta "/cart" donde encontraras los elementos de tu lista y la opción de eliminar un producto, eliminar todos o finalizar tu compra. 
 
