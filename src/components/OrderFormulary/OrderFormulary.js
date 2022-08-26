@@ -17,76 +17,27 @@ const OrderFormulary = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState();
+    const [email2, setEmail2] = useState("");
+    const [phone, setPhone] = useState("");
 
     const { cart, getTotal, clearCart} = useContext(CartContext)
     const total = getTotal()
 
     const submitInfo = async () => {
-    try{
-        if(name === "" || email === "" || !phone){
-            toast.error("You cannot make the purchase because information is missing.", {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                });
-        } else {
-            if( cart.length > 0 ) {
-                const phoneNumber = parseInt(phone)
-                const dbRef = collection(database, 'products')
-                const ordersRef = collection(database,"orders")
-                const cartIds = cart.map(product => product.id)
-                const noStock = []
-                const myBatch = writeBatch(database)
-                const clientInfo = { 
-                    client: {
-                        name: name,
-                        email: email,
-                        phone: phoneNumber
-                    },
-                    items: cart,
-                    total,
-                    date: Timestamp.fromDate(new Date())
-                }
-                
-                const productsadded = await getDocs(query(dbRef, where(documentId(), 'in', cartIds)))
-                const { docs } = productsadded
-                docs.forEach(prod => {
-                    const data = prod.data()
-                    const dataBaseStock = data.stock
-
-                    const products = cart.find(doc => doc.id === prod.id)
-                    const prodQuantity = products?.quantity
-
-                    if(dataBaseStock >= prodQuantity){
-                        myBatch.update(prod.ref, {stock: dataBaseStock - prodQuantity})
-                    }else{
-                        noStock.push({id: prod.id, ...data})
-                    }
-                })
-                if(noStock.length === 0){
-                    const addOrder = await addDoc(ordersRef, clientInfo)
-                    const idCompra = addOrder.id
-                    myBatch.commit()
-                    toast.success(linkToMain(idCompra), {
-                        position: "top-center",
-                        autoClose: false,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                    })
-                    setName("")
-                    setEmail("")
-                    setPhone("")
-                    clearCart()
-                }else{
-                    toast.error("The purchase could not be generated as there is a product out of stock", {
+        try{
+            if(name === "" || email === "" || phone === ""){
+                toast.error("You cannot make the purchase because information is missing.", {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+            } else {
+                if (email !== email2){
+                    toast.error("The email is not the same, please enter the email correctly", {
                         position: "top-right",
                         autoClose: 2000,
                         hideProgressBar: false,
@@ -95,17 +46,81 @@ const OrderFormulary = () => {
                         draggable: true,
                         progress: undefined,
                     });
-                }
                 } else {
-                    toast.error("The purchase could not be generated since the cart is empty", {
-                        position: "top-right",
-                        autoClose: 2000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                    });
+                    if( cart.length > 0 ) {
+                        const phoneNumber = parseInt(phone)
+                        const dbRef = collection(database, 'products')
+                        const ordersRef = collection(database,"orders")
+                        const cartIds = cart.map(product => product.id)
+                        const noStock = []
+                        const myBatch = writeBatch(database)
+                        const clientInfo = { 
+                            client: {
+                                name: name,
+                                email: email,
+                                phone: phoneNumber
+                            },
+                            items: cart,
+                            total,
+                            date: Timestamp.fromDate(new Date())
+                        }
+                
+                        const productsadded = await getDocs(query(dbRef, where(documentId(), 'in', cartIds)))
+                        const { docs } = productsadded
+                        docs.forEach(prod => {
+                            const data = prod.data()
+                            const dataBaseStock = data.stock
+
+                            const products = cart.find(doc => doc.id === prod.id)
+                            const prodQuantity = products?.quantity
+
+                            if(dataBaseStock >= prodQuantity){
+                            myBatch.update(prod.ref, {stock: dataBaseStock - prodQuantity})
+                            } else {
+                            noStock.push({id: prod.id, ...data})
+                            }
+                        })
+
+                        if(noStock.length === 0){
+                            const addOrder = await addDoc(ordersRef, clientInfo)
+                            const idCompra = addOrder.id
+                            myBatch.commit()
+                            toast.success(linkToMain(idCompra), {
+                                position: "top-center",
+                                autoClose: false,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                            })
+                            setName("")
+                            setEmail("")
+                            setEmail2("")
+                            setPhone("")
+                            clearCart()
+                        }else{
+                            toast.error("The purchase could not be generated as there is a product out of stock", {
+                                position: "top-right",
+                                autoClose: 2000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                            });
+                        }
+                    } else {
+                        toast.error("The purchase could not be generated since the cart is empty", {
+                            position: "top-right",
+                            autoClose: 2000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                        });
+                    }
                 } 
             }
         } catch(error){
@@ -125,6 +140,10 @@ const OrderFormulary = () => {
                     <div className="formulario">
                         <label for="email" className="subTittle_formulary">E-mail</label>
                         <input type="email" id="email" className="formulario_input" required="email" value={email} onInput={(evt) => setEmail(evt.target.value)}/>
+                    </div>
+                    <div className="formulario">
+                        <label for="email2" className="subTittle_formulary">Confirm E-mail</label>
+                        <input type="email" id="email2" className="formulario_input" required="email" value={email2} onInput={(evt) => setEmail2(evt.target.value)}/>
                     </div>
                     <div className="formulario">
                         <label for="phone" className="subTittle_formulary">Phone</label>
