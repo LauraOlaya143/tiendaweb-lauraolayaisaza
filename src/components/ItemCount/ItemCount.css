@@ -15,9 +15,9 @@
     width: 30px;
     font-size: 25px;
     font-weight: bold;
-    border:#862451 2px solid;
-    color:#8f265b;
-    background-color: rgb(255, 212, 231);
+    border:#8f265b 2px solid;
+    color:rgb(255, 212, 231);
+    background-color:#8f265b ;
     border-radius: 5px;
     transition: all 0.5s;
     cursor: pointer;
